@@ -1,0 +1,33 @@
+# Mongo classical replica set install (3 nodes)
+
+instanceof VmMongo {
+	name: Mongo primary;
+	
+	instanceof MongoReplicasetMember {
+		name: Mongo primary node;
+		#exports: mongoinstance='test';
+
+		instanceof MongoPrimaryConfig {
+			name: Mongo primary configuration;
+		}
+	}
+}
+
+instanceof VmMongo {
+	name: Mongo secondary 1;
+	
+	instanceof MongoReplicasetMember {
+		name: Mongo secondary node;
+		#exports: mongoinstance='test';
+	}
+}
+
+instanceof VmMongo {
+	name: Mongo secondary 2;
+	
+	instanceof MongoReplicasetMember {
+		name: Mongo secondary node;
+		#exports: mongoinstance='test';
+	}
+}
+
