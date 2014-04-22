@@ -23,3 +23,11 @@ instanceof VM_EC2 {
 	}
 }
 
+instanceof VM_EC2 {
+	name: Tomcat VM2;
+	
+	instanceof Tomcat {
+		name: Tomcat2;
+	}
+}
+
