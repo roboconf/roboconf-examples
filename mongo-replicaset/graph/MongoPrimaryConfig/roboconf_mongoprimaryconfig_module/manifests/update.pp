@@ -1,4 +1,4 @@
-class roboconf_mongoprimaryconfig_module::update($runningState = undef, $mongoreplicasetmember = undef) {
+class roboconf_mongoprimaryconfig_module::update($runningState = undef, $mongoreplicasetmember = undef, $importAdded = undef, $importRemoved = undef) {
 
 # replica-set members is an array of hashes
 # It needs to be declared as the following:
@@ -7,15 +7,18 @@ class roboconf_mongoprimaryconfig_module::update($runningState = undef, $mongore
 #              'mongo2' => {'ip' => '127.0.0.2', 'port' => '8010'}
 #            }
 
-  if $mongoreplicasetmember != undef and $runningState != 'stopped' {
-    file{'/tmp/mongoPrimaryAddNodes.js':
+
+  $tempFile = generate('/bin/date', '+%s')
+
+  if $importAdded != undef {
+    file{"/tmp/$tempFile":
       ensure  => file,
       content => template('roboconf_mongoprimaryconfig_module/mongoPrimaryAddNodes.js.erb'),
     }
 
     exec { "configure_mongo_replicaset":
-      command => "/bin/sleep 10 && /usr/bin/mongo < /tmp/mongoPrimaryAddNodes.js",
-      require => File['/tmp/mongoPrimaryAddNodes.js'],
+      command => "/bin/sleep 10 && /usr/bin/mongo < /tmp/$tempFile",
+      require => File["/tmp/$tempFile"],
       tries => 10,
       try_sleep => 10
     }

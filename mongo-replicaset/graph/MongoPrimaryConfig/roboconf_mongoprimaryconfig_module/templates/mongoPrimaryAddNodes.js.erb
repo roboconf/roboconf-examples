@@ -2,7 +2,7 @@
 new Mongo();
 while(rs.status().myState != 1);
 // Properties of each mongo node
-<% @mongoreplicasetmember.each_with_index do|(key, value), index| -%>
+<% @importAdded.each_with_index do|(key, value), index| -%>
 rs.add("<%= value['ip'] %>:<%= value['port'] %>");
 <% end -%>
 
