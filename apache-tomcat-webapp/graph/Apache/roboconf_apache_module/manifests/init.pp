@@ -3,8 +3,8 @@ class roboconf_apache_module($runningState = undef, $importAdded = undef, $impor
 # 'tomcat' is an array of hashes
 # It needs to be declared as the following:
 # $tomcat = { 
-#              'tomcat1' => {'ip' => '127.0.0.1', 'port' => '8009'},
-#              'tomcat2' => {'ip' => '127.0.0.2', 'port' => '8010'}
+#              'tomcat1' => {'ip' => '127.0.0.1', 'portajp' => '8009'},
+#              'tomcat2' => {'ip' => '127.0.0.2', 'portajp' => '8010'}
 #            }
 
   package{'apache2':
