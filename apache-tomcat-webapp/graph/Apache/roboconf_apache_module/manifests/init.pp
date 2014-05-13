@@ -1,6 +1,6 @@
 class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
 
-# 'workers' is an array of hashes
+# 'tomcat' is an array of hashes
 # It needs to be declared as the following:
 # $tomcat = { 
 #              'tomcat1' => {'ip' => '127.0.0.1', 'port' => '8009'},
