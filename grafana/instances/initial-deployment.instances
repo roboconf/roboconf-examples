@@ -1,0 +1,15 @@
+####################################
+# We start with a simple deployment
+####################################
+
+# A VM with Apache+Grafana
+instanceof VM_EC2 {
+	name: ApacheGrafana;
+	
+	instanceof Apache_Grafana {
+		name: Grafana;
+	}
+}
+
+
+
