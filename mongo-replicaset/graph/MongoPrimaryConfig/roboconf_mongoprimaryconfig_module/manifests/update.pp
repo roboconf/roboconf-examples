@@ -1,4 +1,4 @@
-class roboconf_mongoprimaryconfig_module::update($runningState = undef, $mongoreplicasetmember = undef, $importAdded = undef, $importRemoved = undef) {
+class roboconf_mongoprimaryconfig_module::update($runningState = undef, $mongoreplicasetmember = undef, $importAdded = undef, $importRemoved = undef, $importComponent = undef) {
 
   # replica-set members is an array of hashes, eg.
   # $mongoreplicasetmember = { 

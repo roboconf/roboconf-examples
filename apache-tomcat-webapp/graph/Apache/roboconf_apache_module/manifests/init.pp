@@ -1,4 +1,4 @@
-class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
+class roboconf_apache_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $importComponent = undef, $tomcat = undef) {
 
 # 'tomcat' is an array of hashes
 # It needs to be declared as the following:

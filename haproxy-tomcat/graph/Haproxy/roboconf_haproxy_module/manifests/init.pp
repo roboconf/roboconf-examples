@@ -9,7 +9,7 @@ define setupBalancer($ip, $port) {
 }
 
 
-class roboconf_haproxy_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $tomcat = undef) {
+class roboconf_haproxy_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $importComponent = undef, $tomcat = undef) {
 
 # 'tomcat' is an array of hashes
 # It needs to be declared as the following:
