@@ -1,0 +1,16 @@
+#################################
+##  influxdb  ##
+#################################
+# The VM
+VM_EC2 {
+	alias: Virtual Machine;
+	installer: iaas;
+	children: influxdb;
+}
+# influxdb
+influxdb {
+	alias: Influxdb;
+	installer: bash;	
+}
+
+

@@ -1,0 +1,16 @@
+#################################
+##  Storm ##
+#################################
+# The VM
+VM_EC2 {
+	alias: Virtual Machine;
+	installer: iaas;
+	children: storm;
+}
+# topologie storm
+storm {
+	alias: ClusterStorm;
+	installer: bash;	
+}
+
+

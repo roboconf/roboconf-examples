@@ -1,0 +1,12 @@
+storm.zookeeper.servers:
+    - "localhost"
+storm.local.dir: "/home/log/storm"
+#storm.scheduler: "erods.storm.ElasticScheduler"
+java.library.path: "/usr/local/lib"
+nimbus.host: "localhost"
+supervisor.slots.ports:
+    - 6700
+    - 6701
+    - 6702
+    - 6703
+    - 6704

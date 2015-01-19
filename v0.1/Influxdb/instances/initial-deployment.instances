@@ -1,0 +1,13 @@
+####################################
+# We start with a simple deployment
+####################################
+
+# A VM with influxdb
+instanceof VM_EC2 {
+	name: InfluxdbVM;
+	
+	instanceof influxdb {
+		name: influxdb;
+	}
+}
+
