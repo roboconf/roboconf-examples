@@ -1,0 +1,14 @@
+####################################
+# We start with a simple deployment
+####################################
+
+
+instance of VM_EC2 {
+	name: InfluxDB_with_grafana;
+	
+	instance of InfluxDBGrafana {
+		name: InfluxDBGrafana;
+	}
+}
+
+

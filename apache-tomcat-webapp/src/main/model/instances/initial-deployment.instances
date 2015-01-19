@@ -1,0 +1,33 @@
+####################################
+# We start with a simple deployment
+####################################
+
+# A VM with Apache+load balancer
+instance of VM_EC2 {
+	name: Apache VM;
+	
+	instance of Apache {
+		name: Apache;
+	}
+}
+
+# A VM with Tomcat+webapp
+instance of VM_EC2 {
+	name: Tomcat VM;
+	
+	instance of Tomcat {
+		name: Tomcat;
+		instance of Webapp {
+			name: DemoApp;
+		}
+	}
+}
+
+instance of VM_EC2 {
+	name: Tomcat VM2;
+	
+	instance of Tomcat {
+		name: Tomcat2;
+	}
+}
+

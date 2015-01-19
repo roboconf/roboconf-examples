@@ -1,0 +1,25 @@
+#################################
+##  Apache / Tomcat / Webapp   ##
+#################################
+
+# Here, we only have components.
+# We do not use facets.
+
+# The VM
+VM_EC2 {
+	installer: target;
+	children: Tomcat, Haproxy;
+}
+
+# Tomcat
+Tomcat {
+	installer: puppet;
+	exports: ip, port = 8080;
+}
+
+# Haproxy Load Balancer
+Haproxy {
+	installer: puppet;
+	imports: Tomcat.port, Tomcat.ip;
+}
+

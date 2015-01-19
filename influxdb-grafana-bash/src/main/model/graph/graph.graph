@@ -1,0 +1,14 @@
+#######################
+## InfluxDB/Grafana  ##
+#######################
+# The VM
+VM_EC2 {
+	installer: target;
+	children: InfluxDBGrafana;
+}
+InfluxDBGrafana {
+	installer: bash;
+}
+
+
+

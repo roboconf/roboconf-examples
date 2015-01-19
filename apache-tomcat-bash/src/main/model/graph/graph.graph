@@ -1,0 +1,25 @@
+#######################
+##  Apache / Tomcat  ##
+#######################
+
+# Here, we only have components.
+# We do not use facets.
+
+# The VM
+VM_EC2 {
+	installer: target;
+	children: Tomcat, Apache;
+}
+
+# Tomcat
+Tomcat {
+	installer: bash;
+	exports: ip, portAJP = 8009;
+}
+
+# Apache Load Balancer
+Apache {
+	installer: bash;
+	imports: Tomcat.portAJP, Tomcat.ip;
+}
+

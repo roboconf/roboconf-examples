@@ -1,0 +1,30 @@
+####################################
+# We start with a simple deployment
+####################################
+
+# A VM with Haproxy load balancer
+instance of VM_EC2 {
+	name: Haproxy VM;
+	
+	instance of Haproxy {
+		name: Haproxy;
+	}
+}
+
+# A VM with Tomcat
+instance of VM_EC2 {
+	name: Tomcat VM1;
+	
+	instance of Tomcat {
+		name: Tomcat;
+	}
+}
+
+instance of VM_EC2 {
+	name: Tomcat VM2;
+	
+	instance of Tomcat {
+		name: Tomcat2;
+	}
+}
+

@@ -1,0 +1,14 @@
+#################################
+##  Storm ##
+#################################
+# The VM
+VM_EC2 {
+	installer: target;
+	children: storm;
+}
+# topologie storm
+storm {
+	installer: bash;	
+}
+
+

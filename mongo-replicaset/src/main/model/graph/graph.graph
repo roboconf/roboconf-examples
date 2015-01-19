@@ -1,0 +1,26 @@
+
+# The VM
+VmMongo {
+	installer: target;
+	children: MongoReplicasetMember;
+}
+
+#
+# A mongo node, member of a replica-set.
+# If the node is configured as initial primary of the replica-set,
+# it will contain a "MongoPrimaryConfig" instance.
+#
+MongoReplicasetMember {
+	installer: puppet;
+	exports: mongoinstance, port=27017, ip, replicaset=defaultRepl;
+	children: MongoPrimaryConfig;
+}
+
+#
+# A "primary" configuration, applicable to a mongo replica-set node
+#
+MongoPrimaryConfig {
+	installer: puppet;
+	imports: MongoReplicasetMember.port, MongoReplicasetMember.ip;
+}
+

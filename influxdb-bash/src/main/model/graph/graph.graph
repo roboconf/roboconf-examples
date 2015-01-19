@@ -1,0 +1,14 @@
+#################################
+##  influxdb  ##
+#################################
+# The VM
+VM_EC2 {
+	installer: target;
+	children: influxdb;
+}
+# influxdb
+influxdb {
+	installer: bash;	
+}
+
+

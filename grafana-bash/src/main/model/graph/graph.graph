@@ -1,0 +1,10 @@
+##Apache/Grafana##
+# The VM
+VM_EC2 {
+	installer: target;
+	children: Apache_Grafana;
+}
+# apache+grafana
+Apache_Grafana {
+	installer: bash;	
+}
