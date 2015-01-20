@@ -12,7 +12,7 @@ VmMongo {
 #
 MongoReplicasetMember {
 	installer: puppet;
-	exports: mongoinstance, port=27017, ip, replicaset=defaultRepl;
+	exports: mongoinstance=test, port=27017, ip, replicaset=defaultRepl;
 	children: MongoPrimaryConfig;
 }
 

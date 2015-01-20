@@ -27,10 +27,18 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<roboconf.version>0.2</roboconf.version>
+		<roboconf.version>0.2-SNAPSHOT</roboconf.version>
 	</properties>
 
 	<modules>
+		<module>apache-tomcat-bash</module>
+		<module>apache-tomcat-webapp</module>
+		<module>grafana-bash</module>
+		<module>haproxy-tomcat</module>
+		<module>influxdb-bash</module>
+		<module>influxdb-grafana-bash</module>
+		<module>mongo-replicaset</module>
+		<module>storm-bash</module>
 	</modules>
 
 	<build>
