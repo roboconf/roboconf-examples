@@ -27,7 +27,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<roboconf.version>0.2-SNAPSHOT</roboconf.version>
+		<roboconf.version>0.2</roboconf.version>
 	</properties>
 
 	<modules>
