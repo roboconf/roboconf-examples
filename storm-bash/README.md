@@ -1,10 +1,11 @@
-Deployment of a cluster storm with zookeeper and supervisord
+## Deployment of a Storm cluster...
 
-files:
- -topo.jar: the topology we want to use
- -worker.cfg, nimbus.cfg: files used by supervisord
- -zoo.cfg: configuration of zookeeper
- -storm.yaml: configuration of storm
+... with Zookeeper and Supervisord.
 
-If needed, change the command to start your topology in start.sh .
+Files:
+- **topo.jar**: the topology's description.
+- **worker.cfg**, **nimbus.cfg**: files used by Supervisord.
+- **zoo.cfg**: the configuration for Zookeeper.
+- **storm.yaml**: the configuration for Storm.
 
+If necessary, change the command to start your topology in the **start.sh** script.
