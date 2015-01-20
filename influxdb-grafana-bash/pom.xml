@@ -14,19 +14,21 @@
 -->
 
 <project
-xmlns="http://maven.apache.org/POM/4.0.0"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<prerequisites>
-		<maven>3.0.3</maven>
-	</prerequisites>
+	<parent>
+		<groupId>net.roboconf</groupId>
+		<artifactId>roboconf-examples-parent</artifactId>
+		<version>0.2-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 
 	<groupId>net.roboconf.test</groupId>
 	<artifactId>influxdb-grafana-bash</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<name>InfluxDB/Grafana bash installation</name>
+	<name>Roboconf Example :: Bash :: InfluxDB / Grafana</name>
 	<packaging>roboconf-app</packaging>
 
 	<build>
@@ -34,9 +36,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 			<plugin>
 				<groupId>net.roboconf</groupId>
 				<artifactId>roboconf-maven-plugin</artifactId>
-				<extensions>true</extensions>
 			</plugin>
 		</plugins>
 	</build>
 </project>
-

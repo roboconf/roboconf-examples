@@ -1,5 +1,7 @@
 iaas.properties
+target.properties
 .project
+target
 
 # Linux
 *~

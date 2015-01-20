@@ -1,6 +1,7 @@
-Deployment of a server Apache with grafana framework
+## Deployment of an Apache server with Grafana framework
 
-Files: - default: configuration of Apache
-       - config.js: configuration of grafana
-       - default.json: file of the started grafana dashboard
+Files: 
 
+- **default**: configuration of Apache.
+- **config.js**: configuration of Grafana.
+- **default.json**: file of the started Grafana's dashboard.

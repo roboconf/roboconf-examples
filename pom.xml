@@ -23,22 +23,27 @@
 	<groupId>net.roboconf</groupId>
 	<artifactId>roboconf-examples-parent</artifactId>
 	<version>0.2-SNAPSHOT</version>
-	<name>Roboconf :: Examples Parent</name>
+	<name>Roboconf Examples :: Parent</name>
 	<packaging>pom</packaging>
 
 	<properties>
 		<roboconf.version>0.2</roboconf.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<modules>
+		<!-- Bash first -->
 		<module>apache-tomcat-bash</module>
-		<module>apache-tomcat-webapp</module>
 		<module>grafana-bash</module>
-		<module>haproxy-tomcat</module>
 		<module>influxdb-bash</module>
 		<module>influxdb-grafana-bash</module>
-		<module>mongo-replicaset</module>
 		<module>storm-bash</module>
+		
+		<!-- Puppet then -->
+		<module>mongo-replicaset</module>
+		<module>haproxy-tomcat</module>
+		<module>apache-tomcat-webapp</module>
 	</modules>
 
 	<build>
