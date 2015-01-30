@@ -1,0 +1,35 @@
+#################################
+##  Apache / Tomcat / Webapp   ##
+#################################
+
+# The VM
+VM {
+	installer: target;
+	children: Tomcat, Apache, Mysql;
+}
+
+# Tomcat
+Tomcat {
+	installer: bash;
+	exports: ip, portAJP = 8009;
+	children: Webapp;
+}
+
+# Apache Load Balancer
+Apache {
+	installer: bash;
+	imports: Tomcat.portAJP, Tomcat.ip;
+}
+
+# Webapp
+Webapp {
+	installer: bash;
+	imports: Mysql.*;
+}
+
+# MySQL
+Mysql {
+	installer: bash;
+	exports: ip, port = 33006;
+}
+
