@@ -38,6 +38,7 @@
 		<module>grafana-bash</module>
 		<module>influxdb-bash</module>
 		<module>influxdb-grafana-bash</module>
+		<module>lamp-webapp-bash</module>
 		<module>storm-bash</module>
 		
 		<!-- Puppet then -->
