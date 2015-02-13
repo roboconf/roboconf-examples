@@ -35,13 +35,13 @@
 	<parent>
 		<groupId>net.roboconf</groupId>
 		<artifactId>roboconf-examples-parent</artifactId>
-		<version>0.2-SNAPSHOT</version>
+		<version>0.2</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<groupId>net.roboconf.test</groupId>
 	<artifactId>lamp-webapp-bash</artifactId>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.2</version>
 	<name>Roboconf Example :: Bash :: LAMP</name>
 	<packaging>roboconf-app</packaging>
 
