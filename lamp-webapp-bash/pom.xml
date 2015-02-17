@@ -41,7 +41,6 @@
 
 	<groupId>net.roboconf.test</groupId>
 	<artifactId>lamp-webapp-bash</artifactId>
-	<version>0.3-SNAPSHOT</version>
 	<name>Roboconf Example :: Bash :: LAMP</name>
 	<packaging>roboconf-app</packaging>
 
