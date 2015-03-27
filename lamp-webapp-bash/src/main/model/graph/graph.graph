@@ -1,6 +1,21 @@
-#################################
-##  Apache / Tomcat / Webapp   ##
-#################################
+#########################################
+##  Apache / Tomcat / Webapp / MySQL   ##
+#########################################
+
+#########################################
+# Read me
+#########################################
+# This sample serves as an example 
+# for the first Roboconf tutorials.
+#
+# The VM's recipe indicates agents run in-memory.
+# Other recipes use Bash. Port values should not
+# be changed in this file. Indeed, new values are
+# not injected in the scripts. Recipes should be
+# updated to support it. We kept the scripts simple
+# for new beginners.
+#########################################
+
 
 # The VM
 VM {
@@ -30,6 +45,5 @@ Webapp {
 # MySQL
 Mysql {
 	installer: script;
-	exports: ip, port = 33006;
+	exports: ip, port = 3306;
 }
-
