@@ -13,13 +13,13 @@ VM_EC2 {
 
 # Tomcat
 Tomcat {
-	installer: bash;
+	installer: script;
 	exports: ip, portAJP = 8009;
 }
 
 # Apache Load Balancer
 Apache {
-	installer: bash;
+	installer: script;
 	imports: Tomcat.portAJP, Tomcat.ip;
 }
 

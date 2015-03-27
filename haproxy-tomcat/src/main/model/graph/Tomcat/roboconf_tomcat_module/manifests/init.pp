@@ -1,4 +1,4 @@
-class roboconf_tomcat_module($runningState = undef, $importAdded = undef, $importRemoved = undef, $importComponent = undef, $ip = undef, $port = undef) {
+class roboconf_tomcat_module($runningState = undef, $importDiff = undef, $ip = undef, $port = undef) {
 
   package{'tomcat7':
     ensure => present,

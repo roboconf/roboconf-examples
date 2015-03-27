@@ -8,6 +8,6 @@ VM_EC2 {
 }
 # topologie storm
 storm {
-	installer: bash;	
+	installer: script;	
 }
 

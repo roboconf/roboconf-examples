@@ -10,26 +10,26 @@ VM {
 
 # Tomcat
 Tomcat {
-	installer: bash;
+	installer: script;
 	exports: ip, portAJP = 8009;
 	children: Webapp;
 }
 
 # Apache Load Balancer
 Apache {
-	installer: bash;
+	installer: script;
 	imports: Tomcat.portAJP, Tomcat.ip;
 }
 
 # Webapp
 Webapp {
-	installer: bash;
+	installer: script;
 	imports: Mysql.*;
 }
 
 # MySQL
 Mysql {
-	installer: bash;
+	installer: script;
 	exports: ip, port = 33006;
 }
 

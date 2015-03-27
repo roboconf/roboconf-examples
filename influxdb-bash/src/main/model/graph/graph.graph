@@ -8,7 +8,7 @@ VM_EC2 {
 }
 # influxdb
 influxdb {
-	installer: bash;	
+	installer: script;	
 }
 
 

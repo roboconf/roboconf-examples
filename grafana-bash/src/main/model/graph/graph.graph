@@ -6,5 +6,5 @@ VM_EC2 {
 }
 # apache+grafana
 Apache_Grafana {
-	installer: bash;	
+	installer: script;	
 }

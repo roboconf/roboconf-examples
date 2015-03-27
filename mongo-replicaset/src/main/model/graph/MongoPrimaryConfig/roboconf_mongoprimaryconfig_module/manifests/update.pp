@@ -1,21 +1,25 @@
-class roboconf_mongoprimaryconfig_module::update($runningState = undef, $mongoreplicasetmember = undef, $importAdded = undef, $importRemoved = undef, $importComponent = undef) {
+class roboconf_mongoprimaryconfig_module::update($runningState = undef, $mongoreplicasetmember = undef, $importDiff = undef) {
 
   # replica-set members is an array of hashes, eg.
   # $mongoreplicasetmember = { 
   #   'mongo1' => {'ip' => '127.0.0.1', 'port' => '8009'},
   #   'mongo2' => {'ip' => '127.0.0.2', 'port' => '8010'}
   # }
-  # importAdded (or importRemoved) is a single hash, eg.
-  # $importAdded = {
-  #    'mongo1' => {'ip' => '127.0.0.1', 'port' => '8009'}
+  # importDiff is a single hash, eg.
+  # $importDiff = {
+  #    'added' => {'mongo1' => {'ip' => '127.0.0.1', 'port' => '8009'}},
+  #    'removed' => undef,
+  #    'component' => undef
   # }
 
   # Generate a temporary file name... to limit risk of overwriting
   $tstamp = generate('/bin/date', '+%s')
   $tempFile = inline_template('<%= @tstamp.chomp %>')
 
-  # A new node is expected to be added: it is specified as importAdded
-  if $importAdded != undef {
+  # A new node is expected to be added: it is specified as import added
+  if $importDiff[added] != undef {
+
+    $importAdded = $importDiff[added]
 
     # Generate a mongo script to add a node to the replica set.
     # Requires that the node be started (up and running).
@@ -52,8 +56,10 @@ class roboconf_mongoprimaryconfig_module::update($runningState = undef, $mongore
   }
   # End adding new node
 
-  # A node is expected to be removed: it is specified as importRemoved
-  if $importRemoved != undef {
+  # A node is expected to be removed: it is specified as import removed
+  if $importDiff[removed] != undef {
+
+    $importRemoved = $importDiff[removed]
 
     # Generate a mongo script to remove a node from the replica set.
     file{"/tmp/${tempFile}.js":
