@@ -1,4 +1,4 @@
-class roboconf_webapp_module($runningState = undef) {
+class roboconf_webapp_module($runningState = undef, $importDiff = undef) {
 
   file{'/var/lib/tomcat7/webapps/roboconf-hello':
     ensure  => directory,

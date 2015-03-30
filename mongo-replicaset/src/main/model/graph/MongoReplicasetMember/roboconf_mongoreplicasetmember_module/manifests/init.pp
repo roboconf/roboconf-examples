@@ -9,7 +9,7 @@
 # puppet apply --verbose ./init.pp
 #
 
-class roboconf_mongoreplicasetmember_module($runningState = undef, $replicaset = undef, $mongoinstance = undef, $ip = undef, $port = undef) {
+class roboconf_mongoreplicasetmember_module($runningState = undef, $replicaset = undef, $mongoinstance = undef, $ip = undef, $port = undef, $importDiff = undef) {
 
    include mongodb
    mongodb::mongod {
