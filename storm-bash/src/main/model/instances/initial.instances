@@ -2,12 +2,39 @@
 # We start with a simple deployment
 ####################################
 
-# A VM with influxdb
-instance of VM_EC2 {
-	name: ClusterStorm;
-	
-	instance of storm {
+# A VM with storm Nimbus node
+instance of VM {
+	name: StormNimbus;
+
+	instance of storm_platform {
 		name: storm;
+		instance of storm_nimbus {
+			name: nimbus;
+		}
+	}
+}
+
+# A VM with storm worker node
+instance of VM {
+	name: StormWorker1;
+
+	instance of storm_platform {
+		name: storm;
+		instance of storm_worker {
+			name: worker;
+		}
+	}
+}
+
+# A VM with storm worker node
+instance of VM {
+	name: StormWorker2;
+
+	instance of storm_platform {
+		name: storm;
+		instance of storm_worker {
+			name: worker;
+		}
 	}
 }
 

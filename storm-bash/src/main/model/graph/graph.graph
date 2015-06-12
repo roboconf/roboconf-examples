@@ -2,12 +2,28 @@
 ##  Storm ##
 #################################
 # The VM
-VM_EC2 {
+VM {
 	installer: target;
-	children: storm;
+	children: storm_platform;
 }
-# topologie storm
-storm {
-	installer: script;	
+
+# Storm base platform
+storm_platform {
+	installer: script;
+	children: storm_nimbus, storm_worker;
+}
+
+# Storm nodes
+
+# Storm master node (Nimbus, along with zookeeper + stormUI)
+storm_nimbus {
+	installer: script;
+	exports: ip;
+}
+
+# Storm worker (slave) node
+storm_worker {
+	installer: script;
+	imports: storm_nimbus.ip;
 }
 

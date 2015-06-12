@@ -1,0 +1,14 @@
+# Nimbus and zookeeper hosts to be provided by Roboconf
+# TBD useful on nimbus ?
+#nimbus.host: "localhost"
+#storm.zookeeper.servers:
+#    - "localhost"
+java.library.path: "/usr/local/lib"
+storm.local.dir: "/var/log/storm"
+supervisor.slots.ports:
+    - 6700
+    - 6701
+    - 6702
+    - 6703
+    - 6704
+#storm.scheduler: "your.scheduler.SchedulerClass"
