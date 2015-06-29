@@ -4,6 +4,9 @@
 # Installs Storm base platform
 ##
 
+DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND
+
 STORM=apache-storm-0.9.4
 
 # If storm already installed (eg. on image with storm), exit !

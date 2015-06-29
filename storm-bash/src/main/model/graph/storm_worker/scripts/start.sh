@@ -1,4 +1,6 @@
 #!/bin/bash
+PATH=$PATH:/usr/local/bin
+export PATH
 
 NIMBUS_IP=$storm_nimbus_0_ip
 cp $ROBOCONF_FILES_DIR/storm.yaml /usr/local/storm/conf
