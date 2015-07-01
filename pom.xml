@@ -32,7 +32,7 @@
 
 	<groupId>net.roboconf</groupId>
 	<artifactId>roboconf-examples-parent</artifactId>
-	<version>0.4</version>
+	<version>0.5-SNAPSHOT</version>
 	<name>Roboconf Examples :: Parent</name>
 	<packaging>pom</packaging>
 
