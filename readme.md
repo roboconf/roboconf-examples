@@ -1,8 +1,7 @@
 # Roboconf Examples
 [![License](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-
-Website: [http://roboconf.net](http://roboconf.net)  
-Licensed under the terms of the **Apache License v2**.
+[![Join us on Gitter.im](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg)](https://gitter.im/roboconf/roboconf)
+[![Web site](https://img.shields.io/badge/website-roboconf.net-b23e4b.svg)](http://roboconf.net)
 
 Some examples of Roboconf projects for cloud deployments.
 
